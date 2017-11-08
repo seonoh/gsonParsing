@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         val reader:InputStreamReader = InputStreamReader(inputStream)
         val detailData = gson.fromJson(reader,GsonDate::class.java)
 
-        Toast.makeText(this,"0번째 name : " +detailData.data[0].name,Toast.LENGTH_LONG).show()
         for(data in detailData.data){
             Log.e("TAG",data.name)
         }
